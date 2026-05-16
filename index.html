@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Moderna</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      min-height:100vh;
+      padding:40px;
+      color:white;
+    }
+
+    .dashboard{
+      max-width:1400px;
+      margin:auto;
+    }
+
+    .header{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .header h1{
+      font-size:48px;
+      margin-bottom:10px;
+      font-weight:700;
+    }
+
+    .header p{
+      color:#94a3b8;
+      font-size:18px;
+    }
+
+    .container{
+      display:grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap:20px;
+    }
+
+    .card{
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:22px;
+      padding:25px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.3);
+      transition:0.3s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card:hover{
+      transform:translateY(-8px) scale(1.03);
+      box-shadow:0 12px 40px rgba(0,0,0,0.45);
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      top:-40px;
+      right:-40px;
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      background:rgba(255,255,255,0.06);
+    }
+
+    .title{
+      color:#cbd5e1;
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-bottom:15px;
+    }
+
+    .value{
+      color:white;
+      font-size:36px;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .sub{
+      color:#94a3b8;
+      font-size:13px;
+    }
+
+    .green{ border-top:4px solid #22c55e; }
+    .blue{ border-top:4px solid #3b82f6; }
+    .purple{ border-top:4px solid #a855f7; }
+    .orange{ border-top:4px solid #f97316; }
+    .pink{ border-top:4px solid #ec4899; }
+
+    @media(max-width:1200px){
+      .container{
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:700px){
+      .container{
+        grid-template-columns: 1fr;
+      }
+
+      .header h1{
+        font-size:34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <div class="header">
+      <h1>Dashboard Statistiche</h1>
+      <p>Panoramica generale dei dati in tempo reale</p>
+    </div>
+
+    <div class="container">
+
+      <div class="card green">
+        <div class="title">Utenti</div>
+        <div class="value">1.245</div>
+        <div class="sub">+12% oggi</div>
+      </div>
+
+      <div class="card blue">
+        <div class="title">Vendite</div>
+        <div class="value">€8.420</div>
+        <div class="sub">+5% settimana</div>
+      </div>
+
+      <div class="card purple">
+        <div class="title">Ordini</div>
+        <div class="value">320</div>
+        <div class="sub">+18 nuovi</div>
+      </div>
+
+      <div class="card orange">
+        <div class="title">Messaggi</div>
+        <div class="value">89</div>
+        <div class="sub">3 non letti</div>
+      </div>
+
+      <div class="card pink">
+        <div class="title">Temperatura</div>
+        <div class="value">24°C</div>
+        <div class="sub">Soleggiato</div>
+      </div>
+
+      <div class="card blue">
+        <div class="title">Follower</div>
+        <div class="value">12K</div>
+        <div class="sub">+240 oggi</div>
+      </div>
+
+      <div class="card green">
+        <div class="title">Guadagni</div>
+        <div class="value">€2.1K</div>
+        <div class="sub">Questo mese</div>
+      </div>
+
+      <div class="card purple">
+        <div class="title">Download</div>
+        <div class="value">5.8K</div>
+        <div class="sub">+14%</div>
+      </div>
+
+      <div class="card orange">
+        <div class="title">CPU</div>
+        <div class="value">68%</div>
+        <div class="sub">Stabile</div>
+      </div>
+
+      <div class="card pink">
+        <div class="title">Batteria</div>
+        <div class="value">92%</div>
+        <div class="sub">In carica</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
